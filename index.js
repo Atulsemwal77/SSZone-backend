@@ -7,7 +7,7 @@ const course = require("./routes/Course");
 const modules = require("./routes/Module");
 const lesson = require("./routes/Lesson");
 const quiz = require("./routes/Quiz");
-const assignment = require("./routes/assignment");
+const assignment = require("./routes/announcementRoute");
 const announcement_route = require("./routes/announcementRoute");
 
 app.use("/uploads", express.static("uploads"));
@@ -32,7 +32,7 @@ app.use(cors());
 // Routes Mounts
 app.use("/api/setting", setting);
 app.use("/api/course", course);
-app.use("/api/modules", modules);
+app.use("/api", modules);
 app.use("/api/lesson", lesson);
 app.use("/api/quiz", quiz);
 app.use("/api/assignment", assignment);
